@@ -6,7 +6,7 @@
 /*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 11:18:02 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/18 11:18:40 by orezek           ###   ########.fr       */
+/*   Updated: 2023/10/18 12:14:25 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ char	*ft_strrchr(const char *string, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t size);
 void	*ft_memchr(const void *block, int c, size_t size);
 int		ft_memcmp(const void *a1, const void *a2, size_t size);
-// strnstr - missing prototype in libc
+// strnstr - missing prototype in libc not part of ANSI C standard!
+char	*strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *string);
 // Use malloc()
 void	*ft_calloc(size_t count, size_t eltsize);
