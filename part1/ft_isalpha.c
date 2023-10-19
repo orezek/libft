@@ -6,7 +6,7 @@
 /*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:29:30 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/19 14:53:08 by orezek           ###   ########.fr       */
+/*   Updated: 2023/10/19 15:39:14 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static	int	ft_islower(int c)
 	if (c == EOF)
 		return (0);
 	letter = (unsigned char) c;
-	if (letter >= 'a' & letter <= 'z')
+	if (letter >= 'a' && letter <= 'z')
 		return (1);
 	return (0);
 }
