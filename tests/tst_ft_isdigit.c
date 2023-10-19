@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   tst_ft_isdigit.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
+/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 15:31:54 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/19 15:35:53 by orezek           ###   ########.fr       */
+/*   Updated: 2023/10/19 19:04:00 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "../libft.h"
-#include <ctype.h>
 
 int	main (void)
 {
