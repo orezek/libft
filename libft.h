@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 11:18:02 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/20 12:59:08 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/20 22:04:42 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <ctype.h>
 # include <unistd.h>
 # include <string.h>
+# include <stdlib.h>
 
 typedef struct s_list
 {
