@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:37:03 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/20 09:07:59 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/20 09:11:11 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static	int	ft_isupper(int c)
 	return (0);
 }
 
-int ft_tolower (int c)
+int	ft_tolower(int c)
 {
 	if (ft_isalpha(c) && ft_isupper(c))
 		return (c + 32);
