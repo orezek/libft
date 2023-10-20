@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tst_ft_isprint.c                                   :+:      :+:    :+:   */
+/*   tst_ft_strncmp.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 18:37:54 by aldokezer         #+#    #+#             */
-/*   Updated: 2023/10/20 08:48:30 by aldokezer        ###   ########.fr       */
+/*   Created: 2023/10/20 12:57:19 by aldokezer         #+#    #+#             */
+/*   Updated: 2023/10/20 18:21:20 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-//c tst_ft_isprint.c ../part1/ft_isprint.c && ./a.out
+//cc tst_ft_strncmp.c ../part1/ft_strncmp.c && ./a.out
 int	main (void)
 {
-	char	c = 'A';
-	int result1;
-	int result2;
-	result1 = ft_isprint(c);
-	result2 = isprint(c);
-	result1 += 48;
-	result2 += 48;
-	write(1, &result1, 1);
-	write(1, "\n", 1);
-	write(1, &result2, 1);
-	write(1, "\n", 1);
+	char str[] = "aho";
+	char str1[] = "ahojjjj";
+	char c = 'o';
+
+	printf("%d\n", strncmp(str, str1, 7));
+	printf("%d\n", ft_strncmp(str, str1, 7));
 	return (0);
 }
