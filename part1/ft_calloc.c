@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:29:00 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/21 09:03:59 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/21 09:52:19 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ void	*ft_calloc(size_t count, size_t eltsize)
 	ptr = malloc(count * eltsize);
 	if (ptr == NULL)
 		return (NULL);
-	ft_memset(ptr, 0, sizeof(int));
+	ft_memset(ptr, 0, count * eltsize);
 	return (ptr);
 }
