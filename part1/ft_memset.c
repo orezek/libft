@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:30:36 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/20 23:45:42 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/21 22:00:04 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memset(void *block, int c, size_t size)
 {
 	unsigned char	filler;
 	unsigned char	*ptr;
-	int				limit;
+	size_t			limit;
 
 	filler = (unsigned char) c;
 	ptr = (unsigned char *) block;
