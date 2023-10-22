@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tst_ft_memset.c                                    :+:      :+:    :+:   */
+/*   tst_ft_bzero.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/20 23:01:47 by aldokezer         #+#    #+#             */
-/*   Updated: 2023/10/21 22:02:45 by aldokezer        ###   ########.fr       */
+/*   Created: 2023/10/21 19:22:37 by aldokezer         #+#    #+#             */
+/*   Updated: 2023/10/21 19:34:08 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-//cc -Wall -Wextra -Werror tst_ft_memset.c ../part1/ft_memset.c && ./a.out
-int	main (void)
+//cc tst_ft_bzero.c ../part1/ft_bzero.c && ./a.out | cat -e
+int	main(void)
 {
-	int		str[5] = {1,2,3,4,5};
-	char	*ptr;
-	char	*ptr1;
-
-	ptr = memset(str, 'X', sizeof(str));
-	ptr1 = ft_memset(str, 'X', sizeof(str));
-	write(1, ptr, sizeof(str));
+	char str[] = "ahoj, ty vole jak se mas?";
+	write(1, str, sizeof(str));
 	write(1, "\n", 1);
-	write(1, ptr1, sizeof(str));
-	write(1, "\n", 1);
+	ft_bzero(str, sizeof(str));
+	write(1, str, sizeof(str));
 }

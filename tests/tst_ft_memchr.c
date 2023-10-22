@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tst_ft_memset.c                                    :+:      :+:    :+:   */
+/*   tst_ft_memchr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/20 23:01:47 by aldokezer         #+#    #+#             */
-/*   Updated: 2023/10/21 22:02:45 by aldokezer        ###   ########.fr       */
+/*   Created: 2023/10/21 19:48:00 by aldokezer         #+#    #+#             */
+/*   Updated: 2023/10/21 21:13:59 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-//cc -Wall -Wextra -Werror tst_ft_memset.c ../part1/ft_memset.c && ./a.out
+//cc -Wall -Wextra -Werror tst_ft_memchr.c ../part1/ft_memchr.c && ./a.out | cat -e
 int	main (void)
 {
-	int		str[5] = {1,2,3,4,5};
+	char	str[] = "ahoj";
+	int		ar[5] = {1, 100, 200, 600, 10000};
 	char	*ptr;
-	char	*ptr1;
+	int		*ptr1;
 
-	ptr = memset(str, 'X', sizeof(str));
-	ptr1 = ft_memset(str, 'X', sizeof(str));
-	write(1, ptr, sizeof(str));
+	ptr = ft_memchr(str, 'j', 16);
+	write(1, ptr, 1);
 	write(1, "\n", 1);
-	write(1, ptr1, sizeof(str));
-	write(1, "\n", 1);
+	ptr1 = ft_memchr(ar, 600, 16);
+	printf("%p\n", ptr1);
+	printf("%d\n", *(ptr1 + 0));
+	return (0);
 }
