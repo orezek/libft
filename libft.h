@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 11:18:02 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/20 22:04:42 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/22 08:18:18 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,12 @@ size_t	ft_strlen(const char *s);
 void	*ft_memset(void *block, int c, size_t size);
 void	ft_bzero(void *block, size_t size);
 // redo the restrit qualifier
-void	*ft_memcpy(void *restrictto, const void *restrictfrom, size_t size);
+void	*ft_memcpy(void *to, const void *from, size_t size);
 void	*ft_memmove(void *to, const void *from, size_t size);
 // redo the restrit qualifier
-size_t	ft_strlcpy(char *restrictto, const char *restrictfrom, size_t size);
+size_t	ft_strlcpy(char *to, const char *from, size_t size);
 // redo the restrit qualifier
-size_t	ft_strlcat(char *restrictto, const char *restrictfrom, size_t size);
+size_t	ft_strlcat(char *to, const char *from, size_t size);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(const char *string, int c);
