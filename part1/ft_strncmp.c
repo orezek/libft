@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:36:43 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/20 18:27:25 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/23 13:31:48 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t size)
 	int	start;
 
 	start = 0;
-	while (start < size)
+	while (start < (int) size)
 	{
 		if (*(s1 + start) == '\0' && *(s2 + start) == '\0')
 			break ;
