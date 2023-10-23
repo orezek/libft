@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:30:47 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/23 07:59:42 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/23 10:46:05 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,16 @@ size_t	ft_strlcat(char *to, const char *from, size_t size)
 	to += dst_len;
 	if (src_len + dst_len >= (int) size)
 	{
-		while(step++ < size - 1)
+		while (step++ < size - 1)
 			*(to++) = *(from++);
 		*to = '\0';
 	}
 	else
+	{
 		step = dst_len;
 		while (step++ < size)
 			*(to++) = *(from++);
 		*to = '\0';
+	}
 	return (src_len + dst_len);
 }
