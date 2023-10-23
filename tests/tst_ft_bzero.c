@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   tst_ft_bzero.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 19:22:37 by aldokezer         #+#    #+#             */
-/*   Updated: 2023/10/21 19:34:08 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/23 14:00:56 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-//cc tst_ft_bzero.c ../part1/ft_bzero.c && ./a.out | cat -e
+//cc -Wall -Wextra -Werror tst_ft_bzero.c ../part1/ft_bzero.c && ./a.out | cat -e
 int	main(void)
 {
 	char str[] = "ahoj, ty vole jak se mas?";

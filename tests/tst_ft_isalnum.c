@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   tst_ft_isalnum.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:47:43 by aldokezer         #+#    #+#             */
-/*   Updated: 2023/10/19 19:13:20 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/23 14:08:30 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-//cc tst_ft_isalnum.c ../part1/ft_isalnum.c ../part1/ft_isalpha.c ../part1/ft_isdigit.c && ./a.out
+//cc -Wall -Wextra -Werror tst_ft_isalnum.c ../part1/ft_isalnum.c ../part1/ft_isalpha.c ../part1/ft_isdigit.c && ./a.out
 
 int main (void)
 {
-	char c = '#';
+	char c = 'x';
 	int result1 = 0;
 	int result2 = 0;
 

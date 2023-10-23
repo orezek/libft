@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tst_ft_isdigit.c                                   :+:      :+:    :+:   */
+/*   tst_ft_strnstr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 15:31:54 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/23 14:25:07 by orezek           ###   ########.fr       */
+/*   Created: 2023/10/23 12:43:24 by orezek            #+#    #+#             */
+/*   Updated: 2023/10/23 13:40:01 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-//cc -Wall -Wextra -Werror tst_ft_isdigit.c ../part1/ft_isdigit.c && ./a.out 
-int	main (void)
+//cc -Wall -Wextra -Werror  tst_ft_strnstr.c ../part1/ft_strnstr.c ../part1/ft_strncmp.c ../part1/ft_strlen.c && ./a.out
+int	main(void)
 {
-	char c = 'A';
-	int result1 = 0;
-	int result2 = 0;
-	result1 = ft_isdigit(c);
-	result2 = isdigit(c);
-	result1 += 48;
-	result2 += 48;
-	write(1, &result1, 1);
-	write(1, "\n", 1);
-	write(1, &result2, 1);
-	//printf("%d", result2);
-	write(1, "\n", 1);
+	char	str[] = "ahoj";
+	char	sub[] = "oj";
+	char	*ptr;
+
+	ptr = ft_strnstr(str, sub, 1);
+	write(1, ptr, 4);
 	return (0);
 }

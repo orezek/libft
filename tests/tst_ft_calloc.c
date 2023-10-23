@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   tst_ft_calloc.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 08:47:08 by aldokezer         #+#    #+#             */
-/*   Updated: 2023/10/21 09:14:15 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/23 14:05:15 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-
+//cc -Wall -Wextra -Werror tst_ft_calloc.c ../part1/ft_memset.c ../part1/ft_calloc.c && ./a.out | cat -e
 int	main (void)
 {
 	char	*ptr;

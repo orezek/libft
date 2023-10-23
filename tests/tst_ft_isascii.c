@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   tst_ft_isascii.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 19:00:00 by aldokezer         #+#    #+#             */
-/*   Updated: 2023/10/19 19:03:13 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/23 14:23:41 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-//cc tst_ft_isascii.c ../part1/ft_isascii.c  && ./a.out
+//cc -Wall -Werror -Wextra tst_ft_isascii.c ../part1/ft_isascii.c  && ./a.out
 int main (void)
 {
 	char c = 'A';

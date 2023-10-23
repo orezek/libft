@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   tst_ft_isprint.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 18:37:54 by aldokezer         #+#    #+#             */
-/*   Updated: 2023/10/20 08:48:30 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/23 13:59:36 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-//c tst_ft_isprint.c ../part1/ft_isprint.c && ./a.out
+//c -Wall -Wextra -Werror tst_ft_isprint.c ../part1/ft_isprint.c && ./a.out
 int	main (void)
 {
 	char	c = 'A';
