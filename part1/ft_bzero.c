@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:28:46 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/21 19:32:10 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/23 14:01:39 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *block, size_t size)
 
 	ptr = (unsigned char *) block;
 	start = 0;
-	while (start < size)
+	while (start < (int) size)
 	{
 		*(ptr + start) = 0;
 		start++;
