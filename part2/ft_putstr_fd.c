@@ -6,8 +6,16 @@
 /*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:37:48 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/18 12:37:49 by orezek           ###   ########.fr       */
+/*   Updated: 2023/10/24 09:49:41 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
+
+void	ft_putstr_fd(char *s, int fd)
+{
+	while (*s)
+	{
+		write(fd, s++, 1);
+	}
+}
