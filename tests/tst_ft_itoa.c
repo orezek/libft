@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tst_ft_itoa.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
+/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 14:18:27 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/24 14:41:21 by orezek           ###   ########.fr       */
+/*   Updated: 2023/10/24 20:14:23 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ int	main(void)
 {
 	int	n;
 
-	n = -100;
+	n = -123456;
 	printf("%s", ft_itoa(n));
 }
