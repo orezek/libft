@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
+/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:37:20 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/24 14:37:11 by orezek           ###   ########.fr       */
+/*   Updated: 2023/10/24 20:19:39 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,37 +22,25 @@ static int	ft_nlength(long long n)
 		counter++;
 		n /= 10;
 	}
-	printf("%d\n", counter);
 	return (counter);
 }
 
-static long long	ft_nreverse(long long n)
-{
-	long long	number;
-
-	number = 0;
-	while (n != 0)
-	{
-		number = number * 10 + (n % 10);
-		n /= 10;
-	}
-	printf("%lld\n", number);
-	return (number);
-}
-
-static char	*ft_nconvert(long long n, char *ptr, int flag)
+static char	*ft_nconvert(long long n, char *ptr, int is_negative, int length)
 {
 	char	*nptr;
+	int		len;
 
+	len = length;
 	nptr = ptr;
-	if (flag)
+	if (is_negative)
 		*ptr++ = '-';
 	while (n != 0)
 	{
-		*ptr++ = (n % 10) + 48;
+		*(ptr + length - 1) = ((n % 10) + 48);
 		n /= 10;
+		length--;
 	}
-	*ptr = '\0';
+	*(nptr + len + is_negative) = '\0';
 	return (nptr);
 }
 
@@ -76,7 +64,5 @@ char	*ft_itoa(int n)
 	ptr = malloc((n_length + 1) * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
-	number = ft_nreverse(number);
-	printf("%lld\n", number);
-	return (ft_nconvert(number, ptr, is_negative));
+	return (ft_nconvert(number, ptr, is_negative, n_length));
 }
