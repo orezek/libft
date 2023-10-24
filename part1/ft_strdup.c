@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:30:41 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/20 20:11:20 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/24 13:20:23 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,7 @@ char	*ft_strdup(const char *s)
 		return (NULL);
 	while (*s)
 	{
-		*newstr = *s;
-		s++;
-		newstr++;
+		*newstr++ = *s++;
 	}
 	*newstr = '\0';
 	return (newstr - strlen);
