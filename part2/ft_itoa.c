@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:37:20 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/24 20:19:39 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/24 21:11:42 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,12 @@ char	*ft_itoa(int n)
 	ptr = malloc((n_length + 1) * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
-	return (ft_nconvert(number, ptr, is_negative, n_length));
+	if (number == 0)
+	{
+		*(ptr++) = '0';
+		*(ptr) = '\0';
+		return (ptr - 1);
+	}
+	else
+	 return (ft_nconvert(number, ptr, is_negative, n_length));
 }
