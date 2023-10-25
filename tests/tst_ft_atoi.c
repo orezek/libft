@@ -6,7 +6,7 @@
 /*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 16:15:41 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/23 16:53:59 by orezek           ###   ########.fr       */
+/*   Updated: 2023/10/25 08:51:12 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	main (void)
 
 {
-	char	str[] = "+123.45";
+	char	str[] = "100";
 	int		result;
 	int		result1;
 
