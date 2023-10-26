@@ -6,8 +6,14 @@
 /*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:38:44 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/18 12:38:45 by orezek           ###   ########.fr       */
+/*   Updated: 2023/10/26 11:00:30 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	(*new).next = *(lst);
+	*lst = new;
+}
