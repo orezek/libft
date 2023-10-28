@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:39:15 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/28 19:12:22 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/28 21:05:43 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;
-	t_list	*first;
+	t_list	*head;
 
-	first = NULL;
+	head = NULL;
 	while (lst != NULL)
 	{
 		new = ft_lstnew((*f)(lst->content));
 		if (new == NULL)
 		{
-			ft_lstclear(&first, del);
+			ft_lstclear(&head, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&first, new);
+		ft_lstadd_back(&head, new);
 		lst = lst->next;
 	}
-	return (first);
+	return (head);
 }
