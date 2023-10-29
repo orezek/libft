@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
+/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:37:52 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/23 11:33:28 by orezek           ###   ########.fr       */
+/*   Updated: 2023/10/29 15:23:01 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,24 +90,23 @@ char	*ft_sub(char **str, char *sep)
 		return (sub_start_position);
 	return (0);
 }
-
-char	**ft_split(char *str, char *sep)
+char	**ft_split(char const *s, char c)
 {
 	char	**array_of_sub;
 	char	*sub_start;
 	int		i;
 	int		sub_count;
 
-	if (*str == '\0')
+	if (*s == '\0')
 		return (0);
-	sub_count = ft_substr_count(str, sep);
+	sub_count = ft_substr_count((char*) s, &c);
 	array_of_sub = malloc((sub_count + 1) * sizeof(char *));
 	sub_start = NULL;
 	i = 0;
 	while (i < sub_count)
 	{
-		sub_start = ft_sub(&str, sep);
-		array_of_sub[i] = ft_create_substring(str, sub_start);
+		sub_start = ft_sub((char**) &s, &c);
+		array_of_sub[i] = ft_create_substring((char *)s, sub_start);
 		i++;
 	}
 	array_of_sub[i] = NULL;
