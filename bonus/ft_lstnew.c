@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:39:20 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/27 19:21:21 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/29 15:51:59 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ t_list	*ft_lstnew(void *content)
 	t_list	*node;
 
 	node = malloc(sizeof(t_list));
-		if (node != NULL)
-		{
-			(*node).content = content;
-			(*node).next = NULL;
-			return (node);
-		}
-		else
-			return (NULL);
+	if (node != NULL)
+	{
+		(*node).content = content;
+		(*node).next = NULL;
+		return (node);
+	}
+	else
+		return (NULL);
 }
