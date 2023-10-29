@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:38:16 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/25 17:55:31 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/29 15:47:47 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (ptr == NULL)
 		return (NULL);
 	s += (start);
-	while(len-- > 0)
-			*ptr++ = *s++;
+	while (len-- > 0)
+		*ptr++ = *s++;
 	*ptr = '\0';
 	return (ptr - size);
 }
