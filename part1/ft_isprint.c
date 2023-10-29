@@ -6,13 +6,13 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:30:06 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/19 18:49:27 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/29 15:32:19 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-static int ft_isgraph(int c)
+static int	ft_isgraph(int c)
 {
 	unsigned char	letter;
 
@@ -24,7 +24,7 @@ static int ft_isgraph(int c)
 	return (0);
 }
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	unsigned char	letter;
 
