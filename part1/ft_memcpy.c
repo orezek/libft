@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:30:25 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/22 08:36:20 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/29 15:28:55 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memcpy(void *to, const void *from, size_t size)
 {
-	size_t			step;
-	unsigned char	*toptr;
+	size_t				step;
+	unsigned char		*toptr;
 	const unsigned char	*fromptr;
 
 	toptr = (unsigned char *) to;
