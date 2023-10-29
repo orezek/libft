@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:28:16 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/29 16:51:32 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/29 17:10:47 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ int	ft_atoi(const char *string)
 	}
 	else if (*string == '+')
 		string++;
-	while (isdigit(*string))
+	while (ft_isdigit(*string))
 	{
-		if (!isdigit(*(string + 1)))
+		if (!ft_isdigit(*(string + 1)))
 		{
 			if (is_negative)
 				return ((result += ((int) *string) - 48) * -1);
