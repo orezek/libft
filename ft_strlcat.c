@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:30:47 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/29 16:54:40 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/29 20:49:02 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ size_t	ft_strlcat(char *to, const char *from, size_t size)
 	dst_len = ft_strlen(to);
 	step = dst_len;
 	to += dst_len;
-	if (src_len + dst_len >= (int) size)
+	if (size == 0)
+		return (src_len + dst_len);
+	else if (src_len + dst_len >= (int) size)
 	{
 		while (step++ < size - 1)
 			*(to++) = *(from++);
@@ -30,7 +32,6 @@ size_t	ft_strlcat(char *to, const char *from, size_t size)
 	}
 	else
 	{
-		step = dst_len;
 		while (step++ < size)
 			*(to++) = *(from++);
 		*to = '\0';
