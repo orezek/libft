@@ -3,30 +3,58 @@
 /*                                                        :::      ::::::::   */
 /*   tst_ft_strmapi.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
+/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 11:37:50 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/25 12:13:36 by orezek           ###   ########.fr       */
+/*   Updated: 2023/10/29 18:42:23 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-//cc -Wall -Wextra -Werror tst_ft_strmapi.c ../part2/ft_strmapi.c ../part1/ft_strlen.c && ./a.out
-char	ft_cap(unsigned int n, char c)
+//cc ./.tests/tst_ft_strmapi.c ft_strmapi.c ft_strlen.c&& ./a.out | cat -e
+void	ft_print_result(char const *s)
 {
-	return (c - n);
+	int		len;
+
+	len = 0;
+	while (s[len])
+		len++;
+	write(1, s, len);
 }
 
-int	main(void)
+char	mapi(unsigned int i, char c)
 {
-	char	str[] = "aiqm";
-	char	(*f)(unsigned int, char);
+	static int indexArray[11] = {0};
 
-	f = ft_cap;
-	// ft_strmapi(str, f);
-	printf("%s", ft_strmapi(str, f));
+	if (i > 10 || indexArray[i] == 1)
+		write(1, "wrong index\n", 12);
+	else
+		indexArray[i] = 1;
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	else if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	else
+		return (c);
+}
+// lOrEm IpSuM
+int		main(int argc, const char *argv[])
+{
+	char	*str;
+	char	*strmapi;
+
+	alarm(5);
+	str = (char *)malloc(sizeof(*str) * 12);
+	strcpy(str, "LoReM iPsUm");
+	strmapi = ft_strmapi(str, &mapi);
+	ft_print_result(strmapi);
+	if (strmapi == str)
+		ft_print_result("\nA new string was not returned");
+	if (strmapi[11] != '\0')
+		ft_print_result("\nString is not null terminated");
 	return (0);
 }
+
 
 
 

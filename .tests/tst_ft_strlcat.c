@@ -3,30 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   tst_ft_strlcat.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
+/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 06:57:36 by aldokezer         #+#    #+#             */
-/*   Updated: 2023/10/23 14:27:27 by orezek           ###   ########.fr       */
+/*   Updated: 2023/10/29 20:55:53 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 //cc -Wall -Wextra -Werror tst_ft_strlcat.c ../part1/ft_strlcat.c ../part1/ft_strlen.c && ./a.out | cat -e
+
 int	main (void)
 {
-	const char	src[] = "ahoj";
-	char		des[] = "xxxx";
-	char		*ptr;
-	int			result;
-	int			result_len;
+	char	str[10] = "a";
+	char	src[] = "lorem ipsum dolor sit amet";
+	int		result;
 
-
-	result = ft_strlcat(des, src, 16);
-	result_len = ft_strlen(des);
-	ptr = des;
+	result = ft_strlcat(str, src, 0);
 	printf("%d\n", result);
-	//write(1, "\n", 1);
-	write(1, ptr, result_len);
-	write(1, "\n", 1);
+	printf("%s\n", str);
+	return (0);
 
 }
