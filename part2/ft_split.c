@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:37:52 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/29 15:23:01 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/29 15:46:11 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,7 @@ char	*ft_sub(char **str, char *sep)
 		return (sub_start_position);
 	return (0);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	char	**array_of_sub;
@@ -99,13 +100,13 @@ char	**ft_split(char const *s, char c)
 
 	if (*s == '\0')
 		return (0);
-	sub_count = ft_substr_count((char*) s, &c);
+	sub_count = ft_substr_count((char *)s, &c);
 	array_of_sub = malloc((sub_count + 1) * sizeof(char *));
 	sub_start = NULL;
 	i = 0;
 	while (i < sub_count)
 	{
-		sub_start = ft_sub((char**) &s, &c);
+		sub_start = ft_sub((char **) &s, &c);
 		array_of_sub[i] = ft_create_substring((char *)s, sub_start);
 		i++;
 	}
