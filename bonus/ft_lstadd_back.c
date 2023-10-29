@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:38:39 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/28 20:32:32 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/29 15:53:11 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,4 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		new->next = NULL;
 	}
-
 }
