@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:38:56 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/28 19:29:34 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/29 15:58:42 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (lst != NULL && f != NULL)
+	{
 		while (lst != NULL)
 		{
 			f(lst->content);
 			lst = lst->next;
 		}
+	}
 }
