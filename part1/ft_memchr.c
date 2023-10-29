@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:30:12 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/21 21:08:54 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/29 15:37:27 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memchr(const void *block, int c, size_t size)
 	while (start < size)
 	{
 		if (*(ptr + start) == byte)
-			return ((void *) (ptr + start));
+			return ((void *)(ptr + start));
 		start++;
 	}
 	return (NULL);
