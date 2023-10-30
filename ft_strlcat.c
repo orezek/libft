@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:30:47 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/29 20:49:02 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/30 13:18:31 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ size_t	ft_strlcat(char *to, const char *from, size_t size)
 	dst_len = ft_strlen(to);
 	step = dst_len;
 	to += dst_len;
-	if (size == 0)
-		return (src_len + dst_len);
+	if ((int) size <= dst_len)
+		return (src_len + size);
 	else if (src_len + dst_len >= (int) size)
 	{
 		while (step++ < size - 1)
