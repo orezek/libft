@@ -6,12 +6,14 @@
 /*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 10:03:18 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/25 10:37:11 by orezek           ###   ########.fr       */
+/*   Updated: 2023/10/30 12:27:56 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 //cc tst_ft_putnbr_fd.c ../part2/ft_putnbr_fd.c && ./a.out
+//cc -fsanitize=address ./.tests/tst_ft_putnbr_fd.c ft_putnbr_fd.c ft_itoa.c&& ./a.out
+//cc -fsanitize=leak ./.tests/tst_ft_putnbr_fd.c ft_putnbr_fd.c ft_itoa.c&& ./a.out
 int	main(void)
 {
 	int	max;
