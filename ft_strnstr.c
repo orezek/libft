@@ -6,7 +6,7 @@
 /*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:36:50 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/30 11:14:57 by orezek           ###   ########.fr       */
+/*   Updated: 2023/10/30 13:46:38 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static char	*ft_search_for_sub(const char *str, const char *to_find, size_t len)
 				success_flag += 1;
 			inner_step++;
 		}
-		if (success_flag == (int) ft_strlen(to_find))
+		if (success_flag == (int) ft_strlen(to_find) && inner_step <= (int)len)
 			return ((char *) str + step);
 		step++;
 	}
