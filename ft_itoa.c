@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:37:20 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/29 16:52:46 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/30 12:13:24 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ static char	*ft_nconvert(long long n, char *ptr, int is_negative, int length)
 char	*ft_itoa(int n)
 {
 	long long	number;
-	int			n_length;
 	int			is_negative;
 	char		*ptr;
 
@@ -58,10 +57,10 @@ char	*ft_itoa(int n)
 		number *= -1;
 		is_negative = 1;
 	}
-	n_length = ft_nlength(number);
 	if (is_negative)
-		ptr = malloc((n_length + 2) * sizeof(char));
-	ptr = malloc((n_length + 1) * sizeof(char));
+		ptr = malloc((ft_nlength(number) + 2) * sizeof(char));
+	else
+		ptr = malloc((ft_nlength(number) + 1) * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
 	if (number == 0)
@@ -70,5 +69,5 @@ char	*ft_itoa(int n)
 		*(ptr) = '\0';
 		return (ptr - 1);
 	}
-	return (ft_nconvert(number, ptr, is_negative, n_length));
+	return (ft_nconvert(number, ptr, is_negative, ft_nlength(number)));
 }
