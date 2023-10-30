@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:36:50 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/29 16:55:03 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/30 11:14:57 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	if (*little == '\0')
 		return ((char *) big);
 	if (ft_strlen(big) < ft_strlen(little))
+		return (NULL);
+	if (ft_strlen(little) > len)
 		return (NULL);
 	if (ft_strlen(big) == ft_strlen(little))
 	{
