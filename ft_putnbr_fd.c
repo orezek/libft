@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:37:40 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/29 16:54:11 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/30 11:51:00 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,5 @@ void	ft_putnbr_fd(int n, int fd)
 	ptr = ft_itoa(n);
 	while (*ptr)
 		write(fd, ptr++, 1);
+	free(ptr);
 }
