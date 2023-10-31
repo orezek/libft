@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:31:12 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/29 16:54:23 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/10/31 14:49:08 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strchr(const char *string, int c)
 {
 	if (c == '\0')
-		return ((char *) string + ft_strlen(string) + 1);
+		return ((char *) string + ft_strlen(string));
 	while (*string)
 	{
 		if (*string == c)
