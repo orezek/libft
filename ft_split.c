@@ -6,11 +6,15 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:37:52 by orezek            #+#    #+#             */
-/*   Updated: 2023/11/01 14:21:01 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/11/01 15:55:36 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+//		// array_of_sub = malloc(1 * sizeof(char *));
+		// if (!array_of_sub)
+		// 	return (NULL);
 
 char	*ft_create_substring(char *str, char *sub_start)
 {
@@ -91,18 +95,24 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		sub_count;
 
-	if (*s == '\0')
-		return (0);
+	if (s == NULL || *s == '\0')
+	{
+		array_of_sub = malloc(1 * sizeof(char *));
+		if (!array_of_sub)
+			return (NULL);
+		array_of_sub[0] = NULL;
+		return (array_of_sub);
+	}
 	sub_count = ft_substr_count((char *)s, &c);
 	array_of_sub = malloc((sub_count + 1) * sizeof(char *));
-	sub_start = NULL;
+	if (!array_of_sub)
+		return (NULL);
 	i = 0;
 	while (i < sub_count)
 	{
 		sub_start = ft_sub((char **) &s, &c);
-		array_of_sub[i] = ft_create_substring((char *)s, sub_start);
-		i++;
+		array_of_sub[i++] = ft_create_substring((char *)s, sub_start);
 	}
-	array_of_sub[i] = NULL;
+	array_of_sub[i++] = NULL;
 	return (array_of_sub);
 }
