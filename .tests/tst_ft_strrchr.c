@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   tst_ft_strrchr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
+/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 12:14:43 by aldokezer         #+#    #+#             */
-/*   Updated: 2023/10/23 14:30:11 by orezek           ###   ########.fr       */
+/*   Updated: 2023/10/31 15:32:45 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-//cc -Wall -Werror -Wextra tst_ft_strrchr.c ../part1/ft_strrchr.c ../part1/ft_strlen.c && ./a.out
+//cc -Wall -Werror -Wextra cc -Wall -Werror -Wextra ./.tests/tst_ft_strrchr.c ft_strrchr.c ft_strlen.c && ./a.out
 int	main (void)
 {
 	char str[] = "aosfsf";
