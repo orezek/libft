@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:37:52 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/29 16:54:19 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/11/01 14:21:01 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,7 @@ char	*ft_create_substring(char *str, char *sub_start)
 
 int	is_separator(char c, char *sep)
 {
-	while (*sep)
-	{
-		if (*sep == c)
-			return (1);
-		else
-			sep++;
-	}
-	return (0);
+	return (c == *sep);
 }
 
 int	ft_substr_count(char *str, char *sep)
