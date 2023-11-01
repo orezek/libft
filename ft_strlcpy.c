@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:30:58 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/29 16:54:45 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/11/01 22:54:41 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,16 @@
 
 size_t	ft_strlcpy(char *to, const char *from, size_t size)
 {
-	int			src_size;
-	int			sizet;
+	size_t		src_size;
+	size_t		sizet;
+	int			check;
 	const char	*end;
 
-	sizet = (int) size;
 	src_size = ft_strlen(from);
+	check = (int) size;
+	if (check < 0)
+		return (src_size);
+	sizet = size;
 	end = from + (sizet - 1);
 	if (sizet > src_size)
 	{
@@ -33,5 +37,5 @@ size_t	ft_strlcpy(char *to, const char *from, size_t size)
 			*(to++) = *(from++);
 		*to = '\0';
 	}
-	return ((size_t) src_size);
+	return (src_size);
 }
