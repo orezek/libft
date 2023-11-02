@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:29:42 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/29 16:52:30 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/11/02 12:07:34 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,11 @@ int	ft_isascii(int c)
 
 	if (c == EOF)
 		return (0);
-	letter = (unsigned char) c;
-	if (letter >= 0 && letter <= 127)
-		return (1);
+	if (c < 256)
+	{
+		letter = (unsigned char) c;
+		if (letter >= 0 && letter <= 127)
+			return (1);
+	}
 	return (0);
 }
