@@ -3,27 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   tst_ft_isprint.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
+/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 18:37:54 by aldokezer         #+#    #+#             */
-/*   Updated: 2023/10/23 13:59:36 by orezek           ###   ########.fr       */
+/*   Updated: 2023/11/02 14:19:54 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-//c -Wall -Wextra -Werror tst_ft_isprint.c ../part1/ft_isprint.c && ./a.out
+//cc -Wall -Wextra -Werror ./.tests/tst_ft_isprint.c ft_isprint.c ft_isalpha.c && ./a.out
 int	main (void)
 {
-	char	c = 'A';
-	int result1;
-	int result2;
-	result1 = ft_isprint(c);
-	result2 = isprint(c);
-	result1 += 48;
-	result2 += 48;
-	write(1, &result1, 1);
-	write(1, "\n", 1);
-	write(1, &result2, 1);
-	write(1, "\n", 1);
+	int		i;
+	i =		-1;
+	while (i < 530)
+	{
+		if (!!ft_isprint(i) != !!isprint(i))
+			printf("%d\n", i);
+		i++;
+	}
 	return (0);
 }

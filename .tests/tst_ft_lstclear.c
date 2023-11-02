@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 18:14:38 by aldokezer         #+#    #+#             */
-/*   Updated: 2023/10/27 21:40:17 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/11/02 16:28:43 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,47 +18,18 @@ void del (void *node)
 	free(node);
 }
 
+void free_str_ptr(void *str)
+{
+	free(*((void **)str));
+}
 int	main(void)
 {
-	t_list	*a;
-	t_list	*b;
-	t_list	*c;
-	t_list	*head;
-	t_list	*last;
-// a pointer to a function
-	void (*f)(void*);
-// linking a f pointer to function to the actual function del
-	f = del;
-// always set by defualt a pointer to NULL for preventing undefined behaviour
-	head = NULL;
-// content initialized by malloc
-	char	*ca;
-	char	*cb;
-	char	*cc;
+	char *res = malloc(1000);
+	if (node == NULL)
+		sprintf(res, "(null)");
+	else {
+		sprintf(res, "{node: ptr-> %s}", escape_str((char *)node->content));
+	}
+	return res;
 
-	ca = ft_strdup("first");
-	cb = ft_strdup("second");
-	cc = ft_strdup("third");
-
-// created new t_lists for adding them to the chain
-	a = ft_lstnew(ca);
-	b = ft_lstnew(cb);
-	c = ft_lstnew(cc);
-
-// adding the t_lists to the chain
-	ft_lstadd_front(&head, a);
-	ft_lstadd_front(&head, b);
-	ft_lstadd_front(&head, c);
-
-
-	last = ft_lstlast(head);
-	printf("%p\n", c);
-	printf("%p\n", b);
-	printf("%p\n", a);
-	printf("%p\n", head->next->next->next);
-	printf("%p\n", head);
-	printf("%p\n", last);
-	ft_lstclear(&head, f);
-
-	return (0);
 }
