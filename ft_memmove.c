@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:30:30 by orezek            #+#    #+#             */
-/*   Updated: 2023/11/01 18:45:22 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/11/02 16:17:18 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,19 @@ void	*ft_memmove(void *to, const void *from, size_t size)
 
 	des = to;
 	src = from;
-	if (!des & !src)
+	if (!des || !src)
 		return (to);
-	if (des < src)
+	else if (des < src)
 	{
-		while ((int) size--)
+		while (size--)
 			*(des++) = *(src++);
 	}
-	else
+	else if (des > src)
 	{
-		while ((int) size--)
-			*(des + size) = *(src + size);
+		des += size;
+		src += size;
+		while (size--)
+			*--des = *--src;
 	}
 	return (to);
 }
