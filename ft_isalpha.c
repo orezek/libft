@@ -6,7 +6,7 @@
 /*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:29:30 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/29 16:52:09 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/11/02 12:01:01 by aldokezer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static	int	ft_isupper(int c)
 	if (c == EOF)
 		return (0);
 	letter = (unsigned char) c;
-	if (letter >= 'A' & letter <= 'Z')
+	if (letter >= 'A' && letter <= 'Z')
 		return (1);
 	return (0);
 }
@@ -42,9 +42,13 @@ int	ft_isalpha(int c)
 
 	if (c == EOF)
 		return (0);
-	letter = (unsigned char) c;
-	if (ft_islower(letter) || ft_isupper(letter))
-		return (1);
-	else
-		return (0);
+	if (c < 256)
+	{
+		letter = (unsigned char) c;
+		if (ft_islower(letter) || ft_isupper(letter))
+			return (1);
+		else
+			return (0);
+	}
+	return (0);
 }
