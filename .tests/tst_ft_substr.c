@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tst_ft_substr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 16:54:40 by aldokezer         #+#    #+#             */
-/*   Updated: 2023/10/31 22:41:07 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/11/03 13:01:53 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,13 @@
 //cc -fsanitize=address  -Wall -Wextra -Werror ./.tests/tst_ft_substr.c ft_substr.c ft_strlen.c && ./a.out | cat -e
 int	main(void)
 {
-	char	str[] = "hola";
+	char	*str;
 	char	*strsub;
-	strsub = ft_substr(str, 4, 20);
+
+	str = ft_strdup("0123456789");
+	strsub = ft_substr(str, 9, 10);
 	printf("%s", strsub);
+	free(strsub);
+	free(str);
 	return (0);
 }

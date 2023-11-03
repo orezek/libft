@@ -6,7 +6,7 @@
 /*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 09:45:07 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/26 09:59:27 by orezek           ###   ########.fr       */
+/*   Updated: 2023/11/03 13:26:22 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	main(void)
 	int		*n;
 	int		p;
 
+	ptr = NULL;
 	ptr = ft_lstnew(arr);
 	n = (*ptr).content;
 	//printf("%d\n", *(n + 1));
