@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:30:30 by orezek            #+#    #+#             */
-/*   Updated: 2023/11/02 16:17:18 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/11/03 13:46:41 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ void	*ft_memmove(void *to, const void *from, size_t size)
 
 	des = to;
 	src = from;
-	if (!des || !src)
-		return (to);
-	else if (des < src)
+	if (des < src)
 	{
 		while (size--)
 			*(des++) = *(src++);
