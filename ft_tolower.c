@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:37:03 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/29 16:59:46 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/11/16 13:03:36 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static	int	ft_isupper(int c)
 	if (c == EOF)
 		return (0);
 	letter = (unsigned char) c;
-	if (letter >= 'A' & letter <= 'Z')
+	if (letter >= 'A' && letter <= 'Z')
 		return (1);
 	return (0);
 }
