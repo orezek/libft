@@ -6,7 +6,7 @@
 /*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:37:40 by orezek            #+#    #+#             */
-/*   Updated: 2023/10/30 12:33:53 by orezek           ###   ########.fr       */
+/*   Updated: 2023/11/16 14:26:22 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,21 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*ptr;
-	char	*or_ptr;
+	long int	n_long;
 
-	ptr = ft_itoa(n);
-	or_ptr = ptr;
-	while (*ptr)
-		write(fd, ptr++, 1);
-	free(or_ptr);
+	n_long = n;
+	if (n_long < 0)
+	{
+		n_long = -n_long;
+		ft_putchar_fd('-', fd);
+	}
+	if (n_long > 9)
+	{
+		ft_putnbr_fd(n_long / 10, fd);
+		ft_putnbr_fd(n_long % 10, fd);
+	}
+	else
+	{
+		ft_putchar_fd(n_long + '0', fd);
+	}
 }
