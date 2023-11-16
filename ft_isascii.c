@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldokezer <aldokezer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: orezek <orezek@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:29:42 by orezek            #+#    #+#             */
-/*   Updated: 2023/11/02 12:07:34 by aldokezer        ###   ########.fr       */
+/*   Updated: 2023/11/16 14:16:15 by orezek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_isascii(int c)
 	if (c < 256)
 	{
 		letter = (unsigned char) c;
-		if (letter >= 0 && letter <= 127)
+		if (letter <= 127)
 			return (1);
 	}
 	return (0);
